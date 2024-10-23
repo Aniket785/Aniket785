@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="mainlogo.png" type="image/png">
+    <title>ECLIPSE</title>
+    <style>
+        .vin {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-right: 30px;
+            text-decoration: underline;
+            font-size: 25px;
+        }
+        h1, h2 {
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 50px;
+        }
+        #amo {
+            border: 1px solid rgb(112, 106, 106);
+            padding: 10px;
+            width: 300px;
+            color: black;
+        }
+        #amo::placeholder {
+            color: black;
+            font-size: 15px;
+            opacity: 0.5;
+        }
+        #xx {
+            background-color: red;
+            color: white;
+            width: 200px;
+            height: 30px;
+            border-radius: 6px;
+            font-size: 12px;
+            border: none;
+        }
+        #xx:hover {
+            background-color: rgb(217, 93, 93);
+        }
+        #anu {
+            color: white;
+            font-size: 10px;
+            opacity: 0.6;
+        }
+        #ff {
+            color: white;
+            width: 320px;
+            height: 30px;
+            border-radius: 6px;
+            background-color: blue;
+            font-size: 12px;
+            border: none;
+            margin-top: -1px;
+        }
+        #ff:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            margin-top: 50px;
+            border: 1px solid rgb(33, 27, 27);
+            width: 550px;
+            border-radius: 5px;
+            height: 600px;
+            background-color: white;
+        }
+        .abhi {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 10px;
+            text-decoration: none;
+        }
+        .abhi:hover {
+            text-decoration: underline;
+            opacity: 0.7;
+        }
+        #kl {
+            color: rgb(16, 49, 65);
+            font-size: medium ;
+            margin-bottom: -20PX;
+        }
+        #qw {
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        #rt {
+            margin-top: 5px;
+            margin-left: 1200px;
+            color: red;
+            font-size: 25px;
+        }
+        #rt:hover {
+            text-decoration: underline;
+        }
+        #xf {
+            color: red;
+        }
+        input[type="radio"]{
+                align-items: center;
+        }
+        .yt{
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <img src="file.png" id="cs" width="170px" height="60px" class="yt">
+    <a href="eclipsesignin.html" id="rt">Sign In</a>
+    <center>
+        <div class="container"><br>
+            <h1 class="vin">Update password, email or phone</h1><br>
+            <c1 style="font-size: 18px;">How would you like to reset your password?</c1><br>    
+            <div style="margin-top: 20px;">
+                <input type="radio" name="resetMethod" value="Email" class="alt">Email<br>
+            <input type="radio" name="resetMethod" value="Text Message (SMS)">Text Message (SMS)<br><br>
+            </div>
+            <button type="button" onclick="sxz()" style="background: none; border: none; font-size: 20px; cursor: pointer;text-decoration: underline;">Send</button><br><br><br>
+            <h3>We will send you an email with instructions on how to reset your password</h3><br><br>
+            <form id="sujal">
+                <input type="text" placeholder="OTP" id="amo"><br><span id="xf"></span><br><br> 
+                <button type="submit" id="ff" onclick="otp()">Submit</button><br><br>
+            </form>
+            <a href="https://www.eclipse.com/in/LoginHelp#" id="kl">I can't remember my email address or phone number.</a>
+        </div>
+    </center>
+    <script>    
+        function sxz() {
+            alert("OTP has been sent");
+        }
+    
+        function valid(event) {
+            event.preventDefault(); 
+
+            let isValid = true;
+            const password = document.getElementById("amo").value;
+            const passwordError = document.getElementById("xf");
+
+            passwordError.textContent = ""; 
+
+           
+            const passwordPattern = /.{4,}/;
+
+            if (!password || !passwordPattern.test(password)) {
+                passwordError.textContent = 'Please enter a valid password.';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Check your email or SMS for instructions to reset your password"); 
+            }
+        }
+
+        document.getElementById('sujal').addEventListener('submit', valid);
+    </script>
+</body>
+</html>

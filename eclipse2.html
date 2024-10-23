@@ -1,0 +1,159 @@
+<html lang="en">
+    <head>
+
+        <link rel="icon" href="mainlogo.png" type="image/png"><title>ECLIPSE</title>
+
+        <style>
+
+            .container{
+                text-align: center;
+                padding: 40px;
+                background-color: white;
+                border-radius: 10px;
+                margin-top: -100px;
+               
+            }    
+            ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            .wa{
+                font-size: 50px ;
+                font-family: Arial, Helvetica, sans-serif; 
+            }
+
+
+            #hi{
+                font-size: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
+            }
+
+            #ab{
+                background-color:  white; 
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 5px;
+                width: 350px;
+                color:black;
+            }
+            #ab::placeholder{
+                color: black;
+                font-size: 15px;
+                opacity: 0.5;
+            }
+            #ab:hover{
+                background-color: grey;
+            }
+            #ah{
+                background:transparent;
+                border-radius: 5px;
+                margin-top: -70px;
+                margin-left: 1200px;
+                font-size: 25px;
+            }
+            #ah:hover{
+                font-family: Arial, Helvetica, sans-serif;
+                background:transparent;
+                text-decoration: underline;
+            }
+
+            .button{
+                background: none;
+                border-radius: 5px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+            .button:hover{
+                font-family: Arial, Helvetica, sans-serif;
+                background:transparent;
+                text-decoration: underline;
+            }
+
+            #cs{
+                margin-top: 10px;
+                margin-left: 20px;
+            }
+
+            .tex{
+                font-size: 25px;
+                color: black;   
+            }
+            #xx{
+                background-color: red;
+                border-radius: 5px;
+                width: 350px;
+                height: 35px;
+                font-size: medium;
+            }
+            #xx:hover{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgb(235, 15, 15);
+                text-decoration: underline;
+            }
+            #xzy{
+                font-size: 10px;
+                color: red;
+                font-size: 20px;
+
+            }
+            .yt{
+            margin-top: 20px;
+            margin-left: 15px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1><img src="file.png" id="cs" width="170px" height="60px"></h1>
+        <hr>
+
+        <input type="submit" id="ah" value="sign in" onclick="rrr()">   
+            
+            <center><br><br><br><br>
+                <div class="tex">STEP 1 OF 3</div>
+                    
+                <div class="wa">Welcome back!<br>
+                Joining Eclipse is easy.
+                </div>
+                <ul>
+                <br>Enter your password and you'll be watching in no time.<br><br>
+                <a1 class="hi" >E-mail</a1></ul><br>
+                <form id="sujal">
+                    <input type="password" placeholder="Enter your password" id="ab"><br><span id="xzy"></span><br><br>
+                    
+                <a href="forpass.html" class="button">Forget password?</a><br><br>
+                <input type="submit" id="xx" value="Next">
+                </form>
+            </center>
+            <script>
+                function valid(event) {
+            event.preventDefault();
+
+            let isValid = true;
+            const password = document.getElementById("ab").value;
+
+            const passwordError = document.getElementById("xzy");
+
+            passwordError.textContent = "";
+
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;;
+            
+            if (!password || !passwordPattern.test(password)) {
+                passwordError.textContent = 'Please enter a valid password.';
+                isValid = false;
+            }
+
+            if (isValid) {
+                window.location.href="eclipse3.html";
+            }
+           
+            }
+            document.getElementById('sujal').addEventListener('submit',valid);
+
+            function rrr(){
+                window.location.href="eclipsesignin.html";
+            }
+            </script>
+    </body>
+</html>

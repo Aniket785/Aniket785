@@ -1,0 +1,305 @@
+<html>
+    <link rel="icon" href="mainlogo.png" type="image/png">
+    <title>ECLIPSE</title>
+    <head>
+        <style>
+            body {
+                background-image: url(netf.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-color: black;
+            }
+            .vin {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-right: 110px;
+                font-size: 50px;
+            }
+            h2 {
+                color: red; 
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 50px;
+            }
+            #amo, #ano {
+                background-color: transparent; 
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 5px;
+                width: 280px;
+                height: 40px;
+                color: white;
+            }
+            #amo::placeholder, #ano::placeholder {
+                color: white;
+                font-size: 15px;
+                opacity: 0.5;
+            }
+            #xx {
+                display: inline-block; 
+                background-color: red;
+                color: white; 
+                text-align: center;
+                padding: 8px 80px;
+                font-size: 15px; 
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none; 
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                border: none;
+                width: 280px;
+                height: 40px;
+            }
+            #xx:hover { 
+                background-color: rgb(228, 91, 91);
+            }
+            .anu {
+                color: white; 
+                font-size: 13px;
+                opacity: 0.6;
+            }
+            #ff {
+                color: white;
+                border-radius: 6px; 
+                background-color: rgba(55, 54, 54, 0.7);
+                font-size: 13px;
+                border: none;
+                width: 280px;
+                height: 40px;
+            }
+            #ff:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .container {
+                margin-top: 50px;
+                border: 1px solid rgb(33, 27, 27);
+                width: 450px;
+                border-radius: 5px;
+                height: 650px;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+            .abhi {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                font-size: 13px;
+                text-decoration: none;
+                margin-top: 20px;
+            }
+            .abhi:hover {
+                text-decoration: underline;
+                opacity: 0.7;
+            }
+            .sus {
+                color: white; 
+                display: flex;
+                align-items: center;
+                margin-top: 5px; 
+                margin-left: 48px;
+            }
+            .sus input[type="checkbox"] {
+                margin-right: 8px;
+            }
+            .age {
+                font-size: 13px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .nn {
+                appearance: none;           
+                width: 13px;              
+                height: 13px;            
+                border: 1px solid white;    
+                border-radius: 2px;       
+                margin-left: 45px;        
+                background: transparent;  
+                cursor: pointer;          
+            }
+            .nn:checked {
+                background-color: white; 
+                border: 2px solid black;
+            }
+            .bb {
+                color: white;
+                font-size: 15px;
+                margin-right: 105px;
+                opacity: 0.5;
+            }
+            .mm {
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                text-decoration: none;
+                opacity: 10;
+            }
+            .mm:hover {
+                text-decoration: underline;
+            }
+            .hh {
+                font-size: 14px;
+                color: white;
+                margin-left: 5px;
+                margin-right: 78px;
+                opacity: 0.5;
+            }
+            .yy {
+                color: aqua;
+                text-decoration: none;
+            }
+            .yy:hover {
+                text-decoration: underline;
+                opacity: 0.7;
+            }
+            #jj {
+                background: none;
+                border: none;
+                color: aqua;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            #jj:hover {
+                text-decoration: underline;
+            }
+            .nn {
+                color: aqua;
+            }
+            #ii {
+                font-size: 15px;
+                color: white;
+                margin-left: 20px;
+                margin-right: 10px;
+                opacity: 0.5;
+            }
+            h3 {
+                color: white;
+                margin-top: 200px;
+                opacity: 0.5;
+                font-size: 20px;
+                margin-right: 1150px;
+                font-style: inherit;
+            }
+            .hyt {
+                background: none;
+                color: white;
+                border: none;
+                cursor: pointer;
+                opacity: 0.5;
+                font-size: 20px;
+                margin-right: 1150px;
+            }
+            .hyt:hover {
+                text-decoration: underline;
+            }
+            #kl, #jk, #mn, #no {
+                background: transparent;
+                margin-top: -505px;
+                margin-left: 30px;
+                font-size: 15px;
+                border: none;
+                color: white;
+                opacity: 0.5;
+                cursor: pointer;
+            }
+            #kl:hover, #jk:hover, #mn:hover, #no:hover {
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: underline;
+            }
+            .error {
+                color: red;
+                font-size: 18px;
+                margin-top: 5px;
+                margin-right: 60px;
+            }
+            #email{
+                margin-right: 85px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="file.png" width="170px" height="60px" class="yt">
+        <center>
+            <div class="container">
+                <form id="sujal">
+                    <h1 class="vin">Sign In</h1>
+                    <input type="text" placeholder="Email or mobile number" id="amo" required><br>
+                    <span id="email" class="error"></span><br>
+                    <input type="password" id="ano" placeholder="Password" required><br>
+                    <span id="password" class="error"></span><br>
+                    <button type="submit" id="xx" onclick="valid(event)">Sign In</button><br><br>
+                    <label class="anu">OR</label><br><br>
+                    <button type="button" id="ff" onclick="valid1(event)">Use sign-in code</button><br><br>
+                    <a href="forpass.html" class="abhi">Forget password?</a><br><br>
+                    <div class="sus"><input type="checkbox" class="nn"><label for="meg" class="age">Remember me</label></div><br>
+                    <label class="bb">New to Eclipse?<a href="https://www.Eclipse.com/in/" class="mm">Sign up now.</a></label><br><br>
+                    <label class="hh">This page is protected by Google reCAPTCHA to <br>ensure you're not a bot.<input type="button" id="jj" value="Learn more" onclick="ani()"></label>
+                    <h5 id="ii"></h5>
+                </form>
+            </div><br><br>
+            <div>
+                <h3>Question? Call</h3><button class="hyt" onclick="uu()"> 000-800-919-1694</button>
+            </div>
+            <input type="submit" id="kl" value="FAQ">
+            <input type="submit" id="jk" value="Help Center">
+            <input type="submit" id="mn" value="Terms of use">
+            <input type="submit" id="no" value="Privacy">
+        </center>
+        <script>
+            function valid(event) {
+                event.preventDefault();
+
+                let isValid = true;
+                const email = document.getElementById("amo").value;
+                const password = document.getElementById("ano").value;
+
+                const emailError = document.getElementById("email");
+                const passwordError = document.getElementById("password");
+
+                emailError.textContent = ""; 
+                passwordError.textContent = "";
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+                if (!email || !emailPattern.test(email)) {
+                    emailError.textContent = 'Please enter a valid email.';
+                    isValid = false;
+                }
+                
+                if (!password || !passwordPattern.test(password)) {
+                    passwordError.textContent = 'Please enter a valid password.';
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    window.location.href = "eclipse6.html";
+                }
+            }
+
+            function valid1(event) {
+                event.preventDefault();
+
+                let isValid = true;
+                const email = document.getElementById("amo").value;
+                const emailError = document.getElementById("email");
+                
+                emailError.textContent = ""; // Clear previous error
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!email || !emailPattern.test(email)) {
+                    emailError.textContent = 'Please enter a valid email.';
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    window.location.href = "signincode.html";
+                }
+            }
+
+            function uu() {
+                alert("Do you want to call...?");
+            }
+
+            function ani() {
+                alert("More information about reCAPTCHA.");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="mainlogo.png" type="image/png">
+    <title>ECLIPSE</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(netf.jpg);
+        }
+        .abc {
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            position: fixed;
+            margin-left: -650px;
+            top: 0; 
+            width: 100%; 
+            height: 100px;
+            z-index: 1000;
+        }
+        .hh{
+            height: 25px;
+            width: 45px;
+            margin-top: 60px;
+            color: rgb(163, 161, 161);
+            font-size: 20px;
+            text-decoration: none;
+            margin-left: 40px;
+        }
+        .hh:hover{
+            text-decoration: underline;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .card-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            margin-top: 60px;
+            margin-left: 100px;
+
+        }
+        .card {
+            margin-top: 50px;
+            min-width: 300px;
+            height: 150px;
+            margin-right: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .card:hover{
+            transform: scale(1.05);
+        }
+        .pro {
+            border-radius: 28px;
+            margin-top: 25px;
+            margin-left: 350px;
+        }
+        .pro:hover {
+            transform: scale(1.05);
+        }
+        .card .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card .content {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        h3{
+            font-size: 25px;
+            font-style: inherit;
+        }
+        #idk{
+            margin-top: 75px ;
+            background: none;
+            color: white;
+            border: none;
+        }
+        #idk:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        
+        header{
+            margin-left: -100px;
+        }
+        #idk{
+            margin-top: 75px ;
+            background: none;
+            color: white;
+            border: none;
+        }
+        #idk:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        .pro {
+            border-radius: 28px;
+            margin-top: 25px;
+            margin-left: 950px;
+        }
+        .pro:hover {
+            transform: scale(1.05);
+        
+        }
+        .yt{
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+    
+
+        @media screen and (max-width: 1919px){
+                header{
+                    margin-right: 130px;
+                }    
+                
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="abc">
+            <img src="file.png" width="170px" height="60px" class="yt" alt="Logo">
+            <a href="Home.html" class="hh">Home</a>
+          
+            <a onclick="abhi()"><img src="proimg.jpg" height="60px" width="60px" class="pro" alt="Profile"></a>
+            <a href="eclipsesignin.html"><button id="idk">LOG OUT</button></a>
+        </div>
+    </header><br><br>
+    <hr>    
+    
+   
+        
+        <center>
+            <div class="card-container" id="cardContainer1">
+                <a href="eng/Army of Thieves _ Official Teaser _ Netflix.mp4">
+                    <div class="card">
+                        <img src="eng/army of theves.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>Army Of Thieves</b></u></h4>
+                        </div>
+                </a>
+                </div>
+                <a href="eng/Cars On The Road _ Official Trailer _ Disney+.mp4">
+                    <div class="card">
+                        <img src="eng/cars.jpg" height="100%" width="100%" >
+                        <div class="content">
+                            <h4><u><b>Cars</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+               <a href="eng/pk blinder.mp4">
+                <div class="card">
+                    <img src="eng/pky blinders.jpg" height="100%" width="100%">
+                    <div class="content">
+                        <h4><u><b>Peaky Blinders</b></u></h4>
+                    </div>
+                </div>
+               </a>
+                <a href="eng/dead shot.mp4">
+                    <div class="card">
+                        <img src="eng/deadshot.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>Deadshot</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="eng/Marvel Studios' Black Panther - Official Trailer.mp4">
+                    <div class="card">
+                        <img src="eng/black p.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>Black Panther</b></u></h4>
+                        </div>
+                </a>
+                </div>              
+            </div>
+            <div class="card-container" id="cardContainer2">
+                <a href="eng/I am legend 2.mp4">
+                    <div class="card">
+                        <img src="eng/legend 2.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>I'am Legend 2</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="eng/">
+                    <div class="card">
+                        <img src="eng/karate kid.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>Karate Kid</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="eng/Pirates of the Caribbean_ At World's End (2007) Official Trailer #1 - Johnny Depp Movie HD.mp4">
+                    <div class="card">
+                        <img src="eng/pirates.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>Pirates Of The cabinants</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="eng/n f s.mp4">
+                    <div class="card">
+                        <img src="eng/n f s.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>Need For Speed</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="eng/THE MONKEY KING 3 Official Trailer _ Directed by Soi Cheang _ Starring Aaron Kwok and Zanilia Zhao.mp4">
+                    <div class="card">
+                        <img src="eng/mk king.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>The Monkey King</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+         
+            <div class="card-container" id="cardContainer3">
+               <a href="trailers/apes.mp4">
+                <div class="card">
+                    <img src="A018.jpg" height="100%" width="100%">
+                    <div class="content">
+                        <h4><u><b>Kingdom of the planet of the Apes</b></u></h4>
+                    </div>
+                </div>
+               </a>
+                <a href="trailers/jocker.mp4">
+                    <div class="card">
+                        <img src="A013.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>Jocker</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="trailers/g x k.mp4">
+                    <div class="card">
+                        <img src="A017.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>G x K</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="trailers/VENOM_ LET THERE BE CARNAGE - Official Trailer 2 (HD).mp4">
+                    <div class="card">
+                        <img src="A015.jpg" height="100%" width="100%">
+                        <div class="content">
+                            <h4><u><b>Venom</b></u></h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="trailers/JUMANJI_ THE NEXT LEVEL - Official Trailer (HD).mp4">
+                    <div class="card">
+                        <img src="A016.jpg" width="100%" height="100%">
+                        <div class="content">
+                            <h4><u><b>JUMANJI</b></u></h4>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+        </center>
+</body>
+</html>

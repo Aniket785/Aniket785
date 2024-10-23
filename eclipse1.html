@@ -1,0 +1,150 @@
+<html>
+    <link rel="icon" href="mainlogo.png" type="image/png">
+    <title>ECLIPSE</title>
+    <head>
+        <style>
+            body {
+                background-image: url(netf.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-color: black;
+            }
+            h3 {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: -30px;
+                font-size: 25px;
+            }
+            h4 {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: -10px;
+                font-size: 12px;
+            }
+            #zs {
+                background-color: transparent;
+                height: 45px;
+                width: 300px;
+                padding: 10px;
+                border-radius: 3px;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #h5::placeholder {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                font-size: 10px;
+                opacity: 0.5;
+            }
+            #ab {
+                background-color: red;
+                color: white;
+                text-align: center;
+                padding: 9px 100px;
+                font-size: 22px;
+                font-family: Arial, Helvetica, sans-serif;
+                border-radius: 3px;
+                border: none;
+            }
+            #ab:hover {
+                background-color: darkred;
+            }
+            h2 {
+                color: red;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 50px;
+            }
+            #yy {
+               
+                margin-bottom: 30px;
+                font-size: 20px;
+                margin-left: 900px;
+                background: transparent;
+                color: white;
+            }
+            #oo {
+                background: none;
+                background-color: red;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                color: white;
+                padding: 2px 8px;
+                border-radius: 2px;
+                text-decoration: none;
+            }
+            #oo:hover {
+                background-color: darkred;
+            }
+            h1 {
+                color: white;
+                margin-top: 90px;
+                font-size: 60px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                font-style: unset;
+            }
+            #nbv{
+                color: red;
+                font-size: 18px;
+                margin-right: 345px;
+            }
+            option{
+                background: transparent;
+                color: white;
+            }
+            .yt{
+            margin-top: 20px;
+            margin-left: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="file.png" width="170px" height="60px" class="yt">
+        <select id="yy" onchange="aniket()">
+            <option>--select--</option>
+            <option value="eclipse1.html">English</option>
+            <option value="hindi1.html">हिंदी</option>
+        </select>
+        <a href="eclipsesignin.html" id="oo">Sign In</a>
+        <center>
+            <h1>Unlimited movies, TV <br>shows and more</h1><br>
+            <h3>Starts at ₹149. Cancel at any time.</h3><br>
+            <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+            <form id="xyz">
+                <input type="text" placeholder="Enter address" id="zs">
+                
+                <button type="submit" id="ab">Get Start ></button><br>
+                <span id="nbv"></span>
+            </form>
+        </center>
+        <script>
+            document.getElementById('xyz').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                let isValid = true;
+                const email = document.getElementById("zs").value;
+                const emailError = document.getElementById("nbv");
+
+                emailError.textContent = "";
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email || !emailPattern.test(email)) {
+                    emailError.textContent = 'Please enter a valid email.';
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert("valid");
+                    window.location.href = "eclipse2.html";
+                }
+            });
+            function aniket(){
+                const dropdown=document.getElementById("yy");
+                const selectedPage=dropdown.value;
+                if (selectedPage){
+                    window.location.href=selectedPage;
+                }
+            }
+        </script>
+    </body>
+</html>
